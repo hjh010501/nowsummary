@@ -1,0 +1,13 @@
+{
+  "name": "nowsummary",
+  "version": "1.0.0",
+  "description": "real-time today summary.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "electron": "^2.0.8",
+    "electron-browser-window-options": "^1.0.4"
+  }
+}

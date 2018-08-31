@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html style="border-radius: 50%;">
+<link rel="stylesheet" type="text/css" href="css/window.css">
+<script type="text/javascript" src="js/window.js"></script>
+
+<div class="title">
+  <div class="traffic">
+    <div id="close"></div>
+  </div>
+  <div class="title_content">nowsummary</div>
+</div>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+  </head>
+  <body>
+    <h1>오늘하루</h1>
+    <h1 class="strong">세줄요약</h1>
+  </body>
+
+  <script>
+    const remote = require('electron').remote;
+    document.getElementById("close").addEventListener("click", function (e) {
+         var window = remote.getCurrentWindow();
+         window.close();
+    }); 
+  </script>
+</html>
