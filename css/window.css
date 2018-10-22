@@ -1,47 +1,36 @@
 
-@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@font-face {
+    font-family: 'Intro';
+    src: url('font/Intro.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 @font-face {
     font-family: 'Noto Sans KR';
     font-style: normal;
     font-weight: 400;
-    src: url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2) format('woff2'),
-    url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff) format('woff'),
-    url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf) format('opentype');
+    src: url('font/NotoSansKR-Regular.otf') format('opentype');
 }
 
 @font-face {
     font-family: 'Noto Sans KR Light';
     font-style: normal;
     font-weight: 100;
-    src: url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff2) format('woff2'),
-    url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.woff) format('woff'),
-    url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Light.otf) format('opentype');
+    src: url('font/NotoSansKR-Light.otf') format('opentype');
 }
 
 @font-face {
     font-family: 'Noto Sans KR Bold';
     font-style: normal;
     font-weight: 600;
-    src: url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2) format('woff2'),
-    url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff) format('woff'),
-    url(http://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf) format('opentype');
-}
-
-@font-face {
-    font-family: 'Material Icons';
-    font-style: normal;
-    font-weight: 400;
-    src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
-    src: local('Material Icons'),
-    local('MaterialIcons-Regular'),
-    url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
-    url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
-    url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+    src: url('font/NotoSansKR-Bold.otf') format('opentype');
 }
 
 body {
     margin: 12.5px;
+    overflow: hidden;
+    overflow-y: scroll;
 }
 
 h1 {
@@ -56,19 +45,34 @@ h1 {
     line-height: 20px;
 }
 
+h2 {
+    font-family: 'Noto Sans KR Light';
+    letter-spacing: px;
+    font-size: 20px;
+    font-weight: 900;
+    font-stretch: normal;
+    line-height: 25px;
+}
+
+
 .strong {
     font-family: 'Noto Sans KR Bold';
 }
 
 
 .title {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 40px;
+    height: 60px;
+    background: #fff;
     -webkit-app-region: drag;
+    box-shadow: 0px 22px 55px 3px rgba(255,255,255,.8);
 }
 
 .traffic {
-    margin: 12.5px;
+    margin: 25px;
     float:left;
     -webkit-app-region: no-drag;
 }
@@ -84,13 +88,51 @@ h1 {
     cursor: default;
     user-select:none;
     color: #dbdbdb;
-    font-family: 'Noto Sans KR Bold';
+    font-family: 'Intro';
     letter-spacing: -.5px;
     font-size: 16px;
     font-weight: 900;
     font-style: italic;
     font-stretch: normal;
     text-align: center;
-    line-height: 40px;
-    margin-right: 40px;
+    line-height: 65px;
+    margin-right: 60px;
+}
+
+.content {
+    margin-top: 80px;
+}
+
+.save {
+    top: 1000px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    width: 100%;
+    height: 60px;
+    background-color: #f71a44;
+    cursor: default;
+    user-select:none;
+    font-family: 'Noto Sans KR Bold';
+    letter-spacing: -1px;
+    font-size: 24px;
+    font-weight: 900;
+    font-style: italic;
+    font-stretch: normal;
+    line-height: 60px;
+    text-align: center;
+    padding-right: 25px;
+    margin-left: -25px;
+    color: #fff;
+}
+
+.app {
+    margin: 12.5px;
+    margin-top: 85px;
+}
+
+#myChart2 {
+    margin-top: 50px;
 }

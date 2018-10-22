@@ -2,12 +2,13 @@ var electron = require('electron')
 var defaultWindowOpts = require('electron-browser-window-options')
 var BrowserWindow = electron.BrowserWindow
 var app = electron.app
-const remote = require('electron').remote;
+const remote = require('electron').remote
+const ipcMain = require('electron').ipcMain
+// require('./js/window')
 
   // Keep a global reference of the window object, if you don't, the window will
   // be closed automatically when the JavaScript object is garbage collected.
   let win
-  
 
 var myOpts = Object.assign({}, defaultWindowOpts, {
   width: 400,
@@ -32,6 +33,13 @@ var myOpts = Object.assign({}, defaultWindowOpts, {
       win = null
     })
   }
+
+  ipcMain.on('savehtml',(event, args) =>{
+    //최대인지 확인후 최대화 또는 최대화 취소
+    let content = remote.getCurrentWebContents()
+    content.savePage('/history/test.html', "HTMLComplete")
+    event.sender.send('result', 'MainProcess에서 신호보냄');
+});
 
   // Some APIs can only be used after this event occurs.
   app.on('ready', createWindow)

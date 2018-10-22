@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html style="border-radius: 50%;">
 <link rel="stylesheet" type="text/css" href="css/window.css">
-<script type="text/javascript" src="js/window.js"></script>
 
 <div class="title">
   <div class="traffic">
@@ -11,18 +10,28 @@
 </div>
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <title>📄</title>
   </head>
   <body>
+    <div class="app">
     <h1>오늘하루</h1>
     <h1 class="strong">세줄요약</h1>
+
+    <div class="content">
+      <h2 id="one">I. 나는 똑똑하다나는 똑똑하다나는 똑똑하다나는 똑똑하다나는 똑똑하다나는 똑똑하다</h2>
+      <h2 id="two">II. 나는 똑똑하다나는 똑똑하다나는 똑똑하다나는 똑똑하다나는 똑똑하다나는 똑똑하다</h2>
+      <h2 id="three">III. 나는 똑똑하다나는 똑똑하다나는 똑똑하다나는 똑똑하다나는 똑똑하다나는 똑똑하다</h2>
+    </div>
+
+    <canvas id="myChart"></canvas>
+    <canvas id="myChart2"></canvas>
+  </div>
+    <div id="save" class="save">
+      기록하기
+    </div>
   </body>
 
-  <script>
-    const remote = require('electron').remote;
-    document.getElementById("close").addEventListener("click", function (e) {
-         var window = remote.getCurrentWindow();
-         window.close();
-    }); 
-  </script>
+<script type="text/javascript" src="js/window.js"></script>
+<script type="text/javascript" src="js/charts.js"></script>
+<script type="text/javascript" src="js/newsparse.js"></script>
 </html>

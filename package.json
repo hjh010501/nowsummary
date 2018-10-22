@@ -7,7 +7,12 @@
     "start": "electron ."
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "chart.js": "^2.7.2",
+    "cheerio": "^1.0.0-rc.2",
     "electron": "^2.0.8",
-    "electron-browser-window-options": "^1.0.4"
+    "electron-browser-window-options": "^1.0.4",
+    "iconv": "^2.3.0",
+    "request": "^2.88.0"
   }
 }
