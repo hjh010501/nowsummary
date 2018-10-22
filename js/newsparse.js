@@ -33,15 +33,16 @@ async function getlinks() {
         for(var i = 0; i < title.length; i++) {
             console.log("title : " + title[i] +"\nlink:" + link[i]);
         
-            request(link[i], function(error, response, html2) {
+            request({url: 'https://news.naver.com/main/read.nhn?oid=001&sid1=102&aid=0010417461&mid=shm&mode=LSD&nh=20181022152307', encoding: null}, function(error, response, html2) {
     
             iconv2 = new Iconv1('euc-kr', 'UTF-8//IGNORE');
             
             var htmlDoc = iconv2.convert(html2).toString();
             var $ = cheerio.load(htmlDoc);
-        
+ 
                 $('#articleBodyContents').each(function(){
-                    var news_description = $(this).text().trim();
+                    var news = $(this);
+                    var news_description = news.text().trim();
                     description[i] = news_description;
                     console.log(news_description)
                 })
